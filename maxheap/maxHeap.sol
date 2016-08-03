@@ -90,24 +90,3 @@ library MaxHeap{
         self.elems[pos] = copy;
     }
 }
-
-contract MaxHeapExample{
-    using MaxHeap for MaxHeap.heap;
-
-    MaxHeap.heap public maxHeap;
-
-    function test(){
-        maxHeap.insert(5);
-        maxHeap.insert(3);
-        maxHeap.insert(1);
-        maxHeap.insert(4);
-        maxHeap.deleteMax();
-        maxHeap.insert(2);
-        maxHeap.insert(8);
-    }
-
-    function show() constant returns(uint[101]){
-
-        return maxHeap.elems;
-    }
-} 
