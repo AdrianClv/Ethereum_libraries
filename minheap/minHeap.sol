@@ -90,24 +90,3 @@ library MinHeap{
         self.elems[pos] = copy;
     }
 }
-
-contract MinHeapExample{
-    using MinHeap for MinHeap.heap;
-
-    MinHeap.heap public minHeap;
-
-    function test(){
-        minHeap.insert(5);
-        minHeap.insert(3);
-        minHeap.insert(1);
-        minHeap.insert(4);
-        minHeap.deleteMin();
-        minHeap.insert(2);
-        minHeap.insert(8);
-    }
-
-    function show() constant returns(uint[101]){
-
-        return minHeap.elems;
-    }
-} 
